@@ -1,1 +1,364 @@
-123
+{
+	"commerceSuiteVersion": "1808.0",
+	"extensions": [
+		"adaptivesearchsolr",
+		"adaptivesearchbackoffice",
+		"solrfacetsearchbackoffice",
+		"solrserver",
+		"profiletagaddon",
+		"profileservices",
+		"cmssmartedit",
+		"cmsbackoffice",
+		"cmsoccaddon",
+		"modeltacceleratorservices",
+		"customerticketingaddon",
+		"backoffice"
+	],
+	"useConfig": {
+		"properties": [{
+				"location": "/config/dev/local.properties",
+				"persona": "development"
+			},
+			{
+				"location": "/config/qa/local.properties",
+				"persona": "stage"
+			},
+			{
+				"location": "/config/prod/local.properties",
+				"persona": "production"
+			}
+		],
+		"extensions": {
+			"location": "/config/qa/localextensions.xml",
+			"exclude": [
+				"custom_2_extension_without_dir",
+				"custom_1_extension_with_dir"
+			]
+		},
+		"storefrontAddons": [{
+				"addon": "customerticketingaddon",
+				"storefront": "wdstorefront",
+				"template": "yacceleratorstorefront"
+			},
+			{
+				"addon": "smarteditaddon",
+				"storefront": "wdstorefront",
+				"template": "yacceleratorstorefront"
+			}
+		],
+		"aspects": [{
+				"name": "backoffice",
+				"properties": [{
+						"key": "test.property.1",
+						"value": "test.property-1-value-prod-backoffice",
+						"persona": "production"
+					},
+					{
+						"key": "test.property.2",
+						"value": "test.property-2-value-backoffice"
+					}
+				],
+				"webapps": [
+				{
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "acceleratorservices",
+                    "contextPath": "/acceleratorservices"
+                },
+                {
+                    "name": "smartedit",
+                    "contextPath": "/smartedit"
+                },
+                {
+                    "name": "cmssmartedit",
+                    "contextPath": "/cmssmartedit"
+                },
+                {
+                    "name": "smarteditwebservices",
+                    "contextPath": "/smarteditwebservices"
+                },
+                {
+                    "name": "cmssmarteditwebservices",
+                    "contextPath": "/cmssmarteditwebservices"
+                },
+                {
+                    "name": "oauth2",
+                    "contextPath": "/authorizationserver"
+                },
+                {
+                    "name": "cmswebservices",
+                    "contextPath": "/cmswebservices"
+                },
+                {
+                    "name": "permissionswebservices",
+                    "contextPath": "/permissionswebservices"
+                },
+                {
+                    "name": "previewwebservices",
+                    "contextPath": "/previewwebservices"
+                },
+                {
+                    "name": "personalizationwebservices",
+                    "contextPath": "/personalizationwebservices"
+                },
+                {
+                    "name": "personalizationsearchsmartedit",
+                    "contextPath": "/personalizationsearchsmartedit"
+                },
+                {
+                    "name": "adaptivesearchwebservices",
+                    "contextPath": "/adaptivesearchwebservices"
+                },
+                 {
+                    "name": "productcockpit",
+                    "contextPath": "/productcockpit"
+                },
+                {
+                    "name": "backoffice",
+                    "contextPath": "/backoffice"
+                }
+			  ]
+			},
+			{
+				"name": "accstorefront",
+				"properties": [{
+						"key": "regioncache.queryregion.evictionpolicy",
+						"value": "LRU"
+					},
+					{
+						"key": "spring.session.enabled",
+						"value": "true"
+					},
+					{
+						"key": "spring.session.wdstorefront.save",
+						"value": "async"
+					},
+					{
+						"key": "spring.session.wdstorefront.cookie.name",
+						"value": "JSESSIONID"
+					},
+					{
+						"key": "spring.session.wdstorefront.cookie.path",
+						"value": "/"
+					},
+					{
+						"key": "storefrontContextRoot",
+						"value": ""
+					},
+					{
+						"key": "max.fail.login.attempts",
+						"value": "5"
+					},
+					{
+						"key": "cache.expiration.time",
+						"value": "2"
+					},
+					{
+						"key": "cache.size.limit",
+						"value": "1000"
+					},
+					{
+						"key": "website.westerndigital-us.http",
+						"value": "http://westerndigital-us.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "website.westerndigital-us.https",
+						"value": "https://westerndigital-us.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "website.westerndigital-apac.http",
+						"value": "http://westerndigital-apac.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "website.westerndigital-apac.https",
+						"value": "https://westerndigital-apac.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "website.westerndigital-emea.http",
+						"value": "http://westerndigital-us.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "website.westerndigital-emea.https",
+						"value": "https://westerndigital-emea.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "media.westerndigital-emea.http",
+						"value": "http://media.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "media.westerndigital-emea.https",
+						"value": "https://media.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "media.westerndigital-us.http",
+						"value": "http://media.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "media.westerndigital-us.https",
+						"value": "https://media.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "media.westerndigital-apac.http",
+						"value": "http://media.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					{
+						"key": "media.westerndigital-apac.https",
+						"value": "https://media.ch0tpqkj-westerndi1-d1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "development"
+					},
+					
+					{
+						"key": "website.westerndigital-us.http",
+						"value": "http://westerndigital-us.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "website.westerndigital-us.https",
+						"value": "https://westerndigital-us.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "website.westerndigital-apac.http",
+						"value": "http://westerndigital-apac.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "website.westerndigital-apac.https",
+						"value": "https://westerndigital-apac.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "website.westerndigital-emea.http",
+						"value": "http://westerndigital-emea.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "website.westerndigital-emea.https",
+						"value": "https://westerndigital-emea.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "media.westerndigital-emea.http",
+						"value": "http://media.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "media.westerndigital-emea.https",
+						"value": "https://media.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "media.westerndigital-us.http",
+						"value": "http://media.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "media.westerndigital-us.https",
+						"value": "https://media.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "media.westerndigital-apac.http",
+						"value": "http://media.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "media.westerndigital-apac.https",
+						"value": "https://media.ch0tpqkj-westerndi1-s1-public.model-t.cc.commerce.ondemand.com",
+						"persona": "stage"
+					},
+					{
+						"key": "xss.filter.header.X-Frame-Options",
+						"value": ""
+					}
+				],
+				"webapps": [{
+						"name": "mediaweb",
+						"contextPath": "/medias"
+					},
+					{
+						"name": "wdstorefront",
+						"contextPath": "/wdstorefront"
+					},
+					{
+						"name": "acceleratorservices",
+						"contextPath": "/acceleratorservices"
+					}
+				]
+			},
+			{
+				"name": "backgroundProcessing",
+				"properties": [{
+						"key": "cluster.node.groups",
+						"value": "backgroundProcessing"
+					},
+					{
+						"key": "task.workers.max",
+						"value": "40"
+					},
+					{
+						"key": "impex.import.workers",
+						"value": "8"
+					},
+					{
+						"key": "catalog.sync.workers",
+						"value": "8"
+					},
+					{
+						"key": "task.polling.interval",
+						"value": "1"
+					},
+					{
+						"key": "processengine.process.canjoinpreviousnode.default",
+						"value": "true"
+					},
+					{
+						"key": "cronjob.timertask.loadonstartup",
+						"value": "true"
+					},
+					{
+						"key": "ccronjob.trigger.interval",
+						"value": "30"
+					}
+				],
+				"webapps": [{
+						"name": "hac",
+						"contextPath": ""
+					},
+					{
+						"name": "mediaweb",
+						"contextPath": "/medias"
+					}
+				]
+			}
+		],
+		"tests": {
+			"extensions": ["customerticketingaddon",
+				"wdstorefront"
+			],
+			"annotations": ["UnitTests", "IntegrationTests"],
+			"packages": ["de.hybris.infra.*"]
+		},
+		"webTests": {
+			"extensions": ["wdstorefront"],
+			"excludedPackages": ["de.hybris.platform.*"]
+		}
+	}
+}
