@@ -130,8 +130,8 @@
 	                    "contextPath": "/medias"
 	                },
 	                {
-	                    "name": "ccv2storefront",
-	                    "contextPath": "/ccv2storefront"
+	                    "name": "wdstorefront",
+	                    "contextPath": "/wdstorefront"
 	                }
 	            ]
 	        },
